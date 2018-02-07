@@ -236,9 +236,9 @@ public class QuestionnaireActivity extends AppCompatActivity {
                     String report2 = "";
 
                     String report1_yes1 = "请在运动前咨询内科医生或专业健康管理者，你恐怕需要在有认证医务人员监护的场地开展健身。";
-                    String report2_yes2 = "请咨询内科医生或健康管理专业人士作为好的医疗管理之一部分，并最好在有认证资质的职业教练指导下，循序渐进地逐步推展你的运动计划，将更加获益。";
+                    String report2_yes2 = "建议咨询有资质的医生或健康管理人士，最好在有认证资质的职业教练指导下，循序渐进地推展你的运动计划。";
 
-                    String report_no = "你可以安全开始自我指导的运动计划，包括几乎所有满足你运动需要的安全运动场所运动。";
+                    String report_no = "你可开始在安全场所进行自我指导的运动。";
 
                     String report2_yes1 = "你在心血管危险因素的反馈中有一个风险因素，介于可以或不用咨询医生或专业人士之间，建议谨慎行事。";
                     int count_report1 = 0;

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/device_info"
+            style="@style/ItemText"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="请选择设备，选择后连接设备"
+            android:textSize="13dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/select_ble"
+                style="@style/ItemBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="选择设备" />
+
+            <Button
+                android:id="@+id/connect"
+                style="@style/ItemBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="连接" />
+
+            <Button
+                android:id="@+id/disconnect"
+                style="@style/ItemBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="断开" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_command"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:clickable="false"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/ItemText"
+                android:text="跳转" />
+
+            <Button
+                android:id="@+id/go_to_bong"
+                style="@style/ItemBtn"
+                android:text="bong 手环操作" />
+
+
+            <!--<Button-->
+                <!--android:id="@+id/go_to_bong_fit"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="bong fit操作" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/go_to_bong_fit2"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="bong fit2操作" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

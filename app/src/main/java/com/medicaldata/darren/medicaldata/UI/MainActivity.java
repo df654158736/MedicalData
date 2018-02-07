@@ -1053,7 +1053,8 @@ public class MainActivity extends AppCompatActivity {
             mainList.add(new MainListModel(Res.my_list_title.get(1),R.drawable.wodeshebei));
             mainList.add(new MainListModel(Res.my_list_title.get(2),R.drawable.xitongshebei));
             mainList.add(new MainListModel(Res.my_list_title.get(3),R.drawable.yonghuguanlian));
-            mainList.add(new MainListModel(Res.my_list_title.get(4),R.drawable.yonghuguanlian));
+            mainList.add(new MainListModel(Res.my_list_title.get(4),R.drawable.xitongshebei));
+            mainList.add(new MainListModel(Res.my_list_title.get(5),R.drawable.yonghuguanlian));
         }
 
         /**
@@ -1096,6 +1097,12 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(stepIntent);
                             break;
                         case 4:
+                            Intent bongIntent =   new Intent(getActivity(),com.medicaldata.darren.medicaldata.Bong.MainActivity.class);
+                            Bundle bongBundle = new Bundle() ;
+                            bongIntent.putExtras(bongBundle) ;
+                            startActivity(bongIntent);
+                            break;
+                        case 5:
                             Intent loginIntent =   new Intent(getActivity(),LoginActivity.class);
                             startActivity(loginIntent);
                             break;

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:clickable="false"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/ItemText"
+                android:text="绑定&#038;设置" />
+
+            <Button
+                android:id="@+id/vibrate"
+                style="@style/ItemBtn"
+                android:text="震动手环" />
+
+            <!--<Button-->
+                <!--android:id="@+id/show_bind"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="显示开始绑定动画" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/show_success"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="显示绑定成功动画" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/recovery"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="恢复出厂设置" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/sync_time"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="同步时间" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/read_battery"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="读取电量" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/read_version"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="读取版本" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/set_alarm"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="设置闹钟" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/set_user_info"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="设置用户信息" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/set_more"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="更多设置 >>"-->
+                <!--android:textSize="15dp" />-->
+
+            <TextView
+                style="@style/ItemText"
+                android:text="数据" />
+
+            <Button
+                android:id="@+id/sync"
+                style="@style/ItemBtn"
+                android:text="智能同步" />
+
+            <!--<Button-->
+                <!--android:id="@+id/sync2"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="同步(支持设置同步起始时间)" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/syncUpdate"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="智能同步(支持自定义回传数据)" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/sync2Update"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="同步(支持设置同步起始时间，自定义回传数据)" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/fetch_activity"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="获取某段时间活动数据" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/fetch_heart_rate"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="获取心率数据" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/fetch_detail"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="获取具体detail数据" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/fetch_day_activity"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="获取某天的活动数据" />-->
+
+            <Button
+                android:id="@+id/fetch_summary"
+                style="@style/ItemBtn"
+                android:text="获取总结数据" />
+
+            <!--<Button-->
+                <!--android:id="@+id/clear"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="清空数据" />-->
+
+            <!--<TextView-->
+                <!--style="@style/ItemText"-->
+                <!--android:text="升级" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/dfu"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="固件升级" />-->
+
+            <!--<TextView-->
+                <!--style="@style/ItemText"-->
+                <!--android:text="主动测量心率（bong 2p、bong 2s支持)" />-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginRight="15dp">-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/start_sport"-->
+                    <!--style="@style/ItemBtn.LinearLayout"-->
+                    <!--android:text="打开心率测量" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/read_heart"-->
+                    <!--style="@style/ItemBtn.LinearLayout"-->
+                    <!--android:text="持续读实时心率值" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/stop_sport"-->
+                    <!--style="@style/ItemBtn.LinearLayout"-->
+                    <!--android:text="关闭心率" />-->
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+                <!--style="@style/ItemText"-->
+                <!--android:text="运动模式 (测心率) bong 3、4 支持）" />-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginRight="15dp">-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/start_sport_model"-->
+                    <!--style="@style/ItemBtn.LinearLayout"-->
+                    <!--android:text="开启运动：跑步、骑行、健身" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/read_heart_model"-->
+                    <!--style="@style/ItemBtn.LinearLayout"-->
+                    <!--android:text="持续读运动时的实时心率" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/stop_sport_model"-->
+                    <!--style="@style/ItemBtn.LinearLayout"-->
+                    <!--android:text="关闭运动" />-->
+            <!--</LinearLayout>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/send_sport_status"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="更新运动状态(比如距离) 到手环" />-->
+
+            <!--<TextView-->
+                <!--style="@style/ItemText"-->
+                <!--android:text="自定义命令" />-->
+
+            <!--<Button-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="见代码中的 demo() 用法" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/test"-->
+                <!--style="@style/ItemBtn"-->
+                <!--android:text="自定义中超过20字节的命令处理" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
