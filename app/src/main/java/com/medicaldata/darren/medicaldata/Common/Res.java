@@ -86,6 +86,7 @@ public class Res {
         {add("我的设备");}
         {add("基础数据");}
         {add("计步器");}
+        {add("Bong手环");}
         {add("注销");}
     };
 

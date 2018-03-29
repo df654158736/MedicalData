@@ -16,6 +16,15 @@ allprojects {
     repositories {
         jcenter()
         google()
+        maven { url "https://jitpack.io" }
+        // 添加bong sdk 算法库所在的 maven 地址
+        maven {
+            url 'http://112.124.27.178:9093/repository/maven-public/'
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 }
 

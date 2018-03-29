@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/btn_bong3"
+            style="@style/ItemBtn.Set"
+            android:onClick="sendIncoming"
+            android:text="bong 3 设置" />
+
+        <Button
+            android:id="@+id/btn_bong4"
+            style="@style/ItemBtn.Set"
+            android:onClick="sendIncoming"
+            android:text="bong 4 设置" />
+
+        <TextView
+            style="@style/ItemText.Set"
+            android:text="通用设置" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#CCCCCC" />
+
+        <!--智能心率监测-->
+        <RelativeLayout
+            style="@style/SetItem.Padding"
+            android:clickable="false">
+
+
+            <TextView
+                style="@style/CommonText.ItemBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="自动心率监测" />
+
+            <Switch
+                android:id="@+id/sb_smart_heart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="16dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#CCCCCC" />
+
+        <RelativeLayout
+            style="@style/SetItem.Padding"
+            android:background="#FFFFFF"
+            android:clickable="true">
+
+            <TextView
+                style="@style/CommonText.ItemBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="勿扰模式" />
+
+            <Switch
+                android:id="@+id/no_disturb_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="16dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#CCCCCC" />
+
+
+        <!--久坐提醒-->
+        <RelativeLayout
+            android:id="@+id/rl_sit_remind"
+            style="@style/SetItem.Padding"
+            android:clickable="false">
+
+            <TextView
+                style="@style/CommonText.ItemBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="久坐提醒" />
+
+            <Switch
+                android:id="@+id/sb_sit_remind"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="16dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#CCCCCC" />
+
+        <TextView
+            style="@style/ItemText.Set"
+            android:text="消息通知" />
+
+        <TextView
+            style="@style/ItemText"
+            android:text="需要开启开关,下面的通知才有效"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Call" />
+
+            <CheckBox
+                android:id="@+id/cb_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checked="true"
+                android:text="Sms" />
+
+            <CheckBox
+                android:id="@+id/cb_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checked="true"
+                android:text="QQ" />
+
+            <CheckBox
+                android:id="@+id/cb_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checked="true"
+                android:text="Wechat" />
+
+        </LinearLayout>
+
+
+        <Button
+            style="@style/ItemBtn.Set"
+            android:onClick="sendIncoming"
+            android:text="发送来电提醒" />
+
+        <Button
+            style="@style/ItemBtn.Set"
+            android:onClick="cancelIncoming"
+            android:text="取消来电提醒" />
+
+        <Button
+            style="@style/ItemBtn.Set"
+            android:onClick="sendQQMsg"
+            android:text="发送QQ消息" />
+
+        <Button
+            style="@style/ItemBtn.Set"
+            android:onClick="sendWechatMsg"
+            android:text="发送微信消息" />
+
+        <Button
+            style="@style/ItemBtn.Set"
+            android:onClick="cancelWechatMsg"
+            android:text="取消微信消息" />
+
+        <Button
+            style="@style/ItemBtn.Set"
+            android:onClick="sendSMS"
+            android:text="发送短信" />
+
+
+        <TextView
+            style="@style/ItemText.Set"
+            android:text="其他设置" />
+
+        <Button
+            android:id="@+id/restart"
+            style="@style/ItemBtn.Set"
+            android:text="重启" />
+
+        <Button
+            android:id="@+id/weather"
+            style="@style/ItemBtn.Set"
+            android:text="发送天气信息" />
+
+        <Button
+            android:id="@+id/set_language"
+            style="@style/ItemBtn.Set"
+            android:text="设置手环语言模式" />
+    </LinearLayout>
+
+
+</ScrollView>
