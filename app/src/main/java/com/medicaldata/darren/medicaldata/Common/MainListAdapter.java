@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.medicaldata.darren.medicaldata.Model.MainListModel;
+import com.medicaldata.darren.medicaldata.Model.BaseListModel;
 import com.medicaldata.darren.medicaldata.R;
 
 import java.util.List;
@@ -16,13 +16,13 @@ import java.util.List;
 /**
  * Created by Darren on 2017/8/30.
  */
-public class MainListAdapter extends ArrayAdapter<MainListModel> {
+public class MainListAdapter extends ArrayAdapter<BaseListModel> {
 
     private int resourceId;
 
     public MainListAdapter(Context context, int textViewResourceId,
 
-                           List<MainListModel> objects) {
+                           List<BaseListModel> objects) {
 
         super(context, textViewResourceId, objects);
 
@@ -34,7 +34,7 @@ public class MainListAdapter extends ArrayAdapter<MainListModel> {
 
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        MainListModel mainlist=getItem(position);//获取当前项的Fruit实例
+        BaseListModel mainlist=getItem(position);//获取当前项的Fruit实例
 
         View view;
 
@@ -44,8 +44,8 @@ public class MainListAdapter extends ArrayAdapter<MainListModel> {
             view=convertView;
         }
 
-        ImageView image=(ImageView) view.findViewById(R.id.fruit_image);
-        TextView name=(TextView) view.findViewById(R.id.fruit_name);
+        ImageView image=(ImageView) view.findViewById(R.id.base_list_image);
+        TextView name=(TextView) view.findViewById(R.id.base_list_name);
         image.setImageResource(mainlist.getImageId());
         name.setText(mainlist.getName());
         return view;

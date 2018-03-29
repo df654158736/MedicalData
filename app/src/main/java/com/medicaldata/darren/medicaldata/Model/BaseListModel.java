@@ -3,7 +3,7 @@ package com.medicaldata.darren.medicaldata.Model;
 /**
  * Created by Darren on 2017/8/30.
  */
-public class MainListModel {
+public class BaseListModel {
 
     private String name;
 
@@ -11,9 +11,9 @@ public class MainListModel {
 
 
 
-    public MainListModel(){}
+    public BaseListModel(){}
 
-    public MainListModel(String name,int imageId){
+    public BaseListModel(String name, int imageId){
 
         this.name=name;
 
