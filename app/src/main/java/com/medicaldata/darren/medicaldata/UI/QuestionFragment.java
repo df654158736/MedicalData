@@ -18,15 +18,12 @@ import java.util.List;
 
 public class QuestionFragment extends BaseListFragment {
 
-    List<BaseListModel> mainList=new ArrayList();
     @Override
     public void fillData(List<BaseListModel> items) {
         items.add(new BaseListModel(Res.question_list_title.get(0), R.drawable.shaichawenjuan));
         items.add(new BaseListModel(Res.question_list_title.get(1),R.drawable.shaichawenjuan));
         items.add(new BaseListModel(Res.question_list_title.get(2),R.drawable.wenjuan));
         items.add(new BaseListModel(Res.question_list_title.get(3),R.drawable.wenjuan));
-
-        mainList = items;
     }
 
     @Override
@@ -41,7 +38,7 @@ public class QuestionFragment extends BaseListFragment {
                 Intent bodyDataIntent =new Intent(getActivity(),QuestionnaireActivity.class);
                 Bundle bodyDataBundle = new Bundle() ;
                 bodyDataBundle.putString("QuestionJson",new JsonResult().getRiskSubjectResult()) ;
-                bodyDataBundle.putString("Title", mainList.get(position).getName()) ;
+                bodyDataBundle.putString("Title",Res.question_list_title.get(position)) ;
                 bodyDataIntent.putExtras(bodyDataBundle) ;
                 startActivity(bodyDataIntent);
                 return;
@@ -49,7 +46,7 @@ public class QuestionFragment extends BaseListFragment {
                 Intent sportIntent =new Intent(getActivity(),QuestionnaireActivity.class);
                 Bundle sportBundle = new Bundle() ;
                 sportBundle.putString("QuestionJson",new JsonResult().getSleepResult()) ;
-                sportBundle.putString("Title", mainList.get(position).getName()) ;
+                sportBundle.putString("Title", Res.question_list_title.get(position)) ;
                 sportIntent.putExtras(sportBundle) ;
                 startActivity(sportIntent);
                 return;
@@ -57,7 +54,7 @@ public class QuestionFragment extends BaseListFragment {
                 Intent CardiovasscilarDiseaseIntent =new Intent(getActivity(),QuestionnaireActivity.class);
                 Bundle CardiovasscilarDiseaseBundle = new Bundle() ;
                 CardiovasscilarDiseaseBundle.putString("QuestionJson",new JsonResult().getCardiovascularDiseaseResult()) ;
-                CardiovasscilarDiseaseBundle.putString("Title", mainList.get(position).getName()) ;
+                CardiovasscilarDiseaseBundle.putString("Title", Res.question_list_title.get(position)) ;
                 CardiovasscilarDiseaseIntent.putExtras(CardiovasscilarDiseaseBundle) ;
                 startActivity(CardiovasscilarDiseaseIntent);
                 return;
@@ -65,7 +62,7 @@ public class QuestionFragment extends BaseListFragment {
                 Intent physicalAgilityIntent =new Intent(getActivity(),QuestionnaireActivity.class);
                 Bundle physicalAgilityBundle = new Bundle() ;
                 physicalAgilityBundle.putString("QuestionJson",new JsonResult().getPhysicalAgilitySubjectResult()) ;
-                physicalAgilityBundle.putString("Title", mainList.get(position).getName()) ;
+                physicalAgilityBundle.putString("Title", Res.question_list_title.get(position)) ;
                 physicalAgilityIntent.putExtras(physicalAgilityBundle) ;
                 startActivity(physicalAgilityIntent);
                 return;
