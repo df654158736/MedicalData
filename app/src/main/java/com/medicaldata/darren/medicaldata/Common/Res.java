@@ -13,6 +13,8 @@ import java.util.List;
  */
 public class Res {
 
+    public static final String domain = "http://47.92.117.30/api/";
+
     public static LoginBean loginBeanModel;
 
     public static List<Activity> activityLists = new ArrayList<>();

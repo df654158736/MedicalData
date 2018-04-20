@@ -15,7 +15,6 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="4dp"
-            android:text="我的BMI：24"
             android:textColor="#000000" />
 
         <TextView
@@ -38,6 +37,7 @@
         android:background="@color/colorData"
         android:gravity="center"
         android:text="长期数据"
+        android:layout_marginTop="10dp"
         android:textColor="#ffffff" />
 
     <View

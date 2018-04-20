@@ -1,6 +1,7 @@
 package com.medicaldata.darren.medicaldata.UI;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -19,12 +20,24 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.loopj.android.http.RequestParams;
+import com.lzy.okgo.cache.CacheMode;
+import com.lzy.okgo.model.Response;
 import com.medicaldata.darren.medicaldata.Base.BaseFragment;
+import com.medicaldata.darren.medicaldata.Common.NewsCallback;
 import com.medicaldata.darren.medicaldata.Common.Res;
+import com.medicaldata.darren.medicaldata.Common.mUtil;
+import com.medicaldata.darren.medicaldata.Model.ChartDataBean;
 import com.medicaldata.darren.medicaldata.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import com.lzy.okgo.OkGo;
+
+import org.json.JSONObject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -202,6 +215,56 @@ public class DataFragment extends BaseFragment {
                 mholder2.mTextViewDes1.setText(arry[0]);
                 if(arry.length >1){
                     mholder2.mTextViewDes2.setText(arry[1]);
+                }else{
+                    mholder2.mTextViewDes2.setText("");
+                }
+
+                switch (position){
+                    //btsleep
+                    case 3:
+                        mholder2.mButton.setOnClickListener(new View.OnClickListener(){
+                            @Override
+                            public void onClick(View view) {
+                                Map<String, String> param = new HashMap<>();
+                                param.put("FieldName", "Sleep");
+                                param.put("Id", Res.loginBeanModel.getId());
+                                JSONObject jsonObject = new JSONObject(param);
+
+                                OkGo.<List<ChartDataBean>>post(Res.domain+"Data/LoadUserData")
+                                        .cacheKey("TabFragment_SearchMapFragment")
+                                        .tag(this)
+                                        .upJson(jsonObject)
+                                        .cacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST)  //缓存模式先使用缓存,然后使用网络数据
+                                        .execute(new NewsCallback<List<ChartDataBean>>() {
+                                            @Override
+                                            public void onSuccess(Response<List<ChartDataBean>> response) {
+
+                                                List<ChartDataBean> list = response.body();
+
+                                                String[] datearray = new String[list.size()];
+                                                float[] objectarray = new float[list.size()];
+
+                                                int count = 0;
+                                                for (ChartDataBean result : list) {
+                                                    datearray[count] = mUtil.getSimpleDateFormate(result.CreatedTime);
+                                                    objectarray[count] = result.SpendHour;
+                                                    count++;
+                                                }
+
+                                                Intent intent = new Intent(getActivity(), LineChartActivity.class);
+                                                Bundle bundle = new Bundle();
+                                                bundle.putSerializable("Data", datearray);
+                                                bundle.putSerializable("Score", objectarray);
+                                                bundle.putString("Type", "Float1");
+                                                bundle.putString("YName", "睡眠时间");
+                                                bundle.putString("Title", "睡眠时间连续分布表");
+                                                intent.putExtras(bundle);
+                                                startActivity(intent);
+                                            }
+                                        });
+
+                            }
+                        });
                 }
 
             } else {
@@ -210,6 +273,8 @@ public class DataFragment extends BaseFragment {
                 mholder1.mTextViewDes1.setText(arry[0]);
                 if(arry.length >1){
                     mholder1.mTextViewDes2.setText(arry[1]);
+                }else{
+                    mholder1.mTextViewDes2.setText("");
                 }
 
             }
